@@ -1,16 +1,15 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "sentinelsniff"
 version = "2.0.0"
 description = "Professional Network Traffic Anomaly Detection & Forensics Engine"
-readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "Deepesh Kumar Mahawar", email = "deepeshmahawar2006@gmail.com" }]
-keywords = ["cybersecurity", "network", "pcap", "sniffer", "soc", "mitre-attack"]
-classifiers = ["Programming Language :: Python :: 3", "Topic :: Security", "License :: OSI Approved :: MIT License"]
+keywords = ["cybersecurity", "network", "packet-analysis", "sniffer", "soc", "mitre-attack"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Security"]
 requires-python = ">=3.10"
 dependencies = ["scapy>=2.5.0"]
 
@@ -19,3 +18,10 @@ sentinelsniff = "sentinelsniff.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/deepmaha2006/SentinelSniff"
+
+[tool.setuptools.packages.find]
+include = ["sentinelsniff*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
