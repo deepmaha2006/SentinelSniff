@@ -1,0 +1,5 @@
+{
+  "thresholds": {"port_scan_ports": 20, "icmp_flood_count": 100, "syn_flood_count": 50, "large_icmp_bytes": 1024},
+  "output": {"dir": "reports", "formats": ["html", "json", "csv"]},
+  "whitelist_ips": ["127.0.0.1", "::1"]
+}
